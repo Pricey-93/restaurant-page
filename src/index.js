@@ -1,3 +1,6 @@
+import createHomeContent from './home';
+import createMenu from './menu';
+
 function createNavigationBar() {
   const header = document.createElement('header');
   const h1 = document.createElement('h1');
@@ -7,6 +10,9 @@ function createNavigationBar() {
   const menuTab = document.createElement('li');
   const contactTab = document.createElement('li');
   h1.textContent = 'Pizza Palace';
+  homeTab.textContent = 'Home';
+  menuTab.textContent = 'Menu';
+  contactTab.textContent = 'Contact';
   ul.appendChild(homeTab);
   ul.appendChild(menuTab);
   ul.appendChild(contactTab);
@@ -16,6 +22,16 @@ function createNavigationBar() {
   return header;
 }
 
+function createFooter() {
+  const footer = document.createElement('footer');
+  const p = document.createElement('p');
+  p.textContent = 'placeholder';
+  footer.appendChild(p);
+  return footer;
+}
+
 const content = document.getElementById('content');
-const navigationBar = createNavigationBar();
-content.appendChild(navigationBar);
+content.appendChild(createNavigationBar());
+// content.appendChild(createHomeContent());
+content.appendChild(createMenu());
+// content.appendChild(createFooter());
