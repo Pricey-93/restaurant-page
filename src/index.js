@@ -12,18 +12,15 @@ content.appendChild(createFooter());
 // event listeners
 const homeTab = document.getElementById('home-tab');
 homeTab.addEventListener('click', () => {
-  console.log(document.querySelector('.active-content'));
   content.replaceChild(createHomeContent(), document.querySelector('.active-content'));
 });
 
 const menuTab = document.getElementById('menu-tab');
 menuTab.addEventListener('click', () => {
-  console.log(document.querySelector('.active-content'));
   content.replaceChild(createMenu(), document.querySelector('.active-content'));
 });
 
 const contactTab = document.getElementById('contact-tab');
 contactTab.addEventListener('click', () => {
-  console.log(document.querySelector('.active-content'));
   content.replaceChild(createContactContent(), document.querySelector('.active-content'));
 });
