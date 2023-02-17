@@ -14,7 +14,8 @@ function createMenuItem(title, description) {
 
 export default function createMenu() {
   const container = document.createElement('div');
-  container.id = 'menu-container';
+  container.id = 'menu-content-container';
+  container.classList.add('active-content');
   container.appendChild(createMenuItem('pepperoni pizza', 'This is a real good pizza'));
   container.appendChild(createMenuItem('pinapple pizza', 'Only uncultured people disagree with this pizza'));
   return container;
