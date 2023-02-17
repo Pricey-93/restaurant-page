@@ -1,37 +1,29 @@
+import createNavigationBar from './navigation-bar';
+import createContactContent from './contact';
 import createHomeContent from './home';
 import createMenu from './menu';
-
-function createNavigationBar() {
-  const header = document.createElement('header');
-  const h1 = document.createElement('h1');
-  const nav = document.createElement('nav');
-  const ul = document.createElement('ul');
-  const homeTab = document.createElement('li');
-  const menuTab = document.createElement('li');
-  const contactTab = document.createElement('li');
-  h1.textContent = 'Pizza Palace';
-  homeTab.textContent = 'Home';
-  menuTab.textContent = 'Menu';
-  contactTab.textContent = 'Contact';
-  ul.appendChild(homeTab);
-  ul.appendChild(menuTab);
-  ul.appendChild(contactTab);
-  nav.appendChild(ul);
-  header.appendChild(h1);
-  header.appendChild(nav);
-  return header;
-}
-
-function createFooter() {
-  const footer = document.createElement('footer');
-  const p = document.createElement('p');
-  p.textContent = 'placeholder';
-  footer.appendChild(p);
-  return footer;
-}
+import createFooter from './footer';
 
 const content = document.getElementById('content');
 content.appendChild(createNavigationBar());
-// content.appendChild(createHomeContent());
-content.appendChild(createMenu());
-// content.appendChild(createFooter());
+content.appendChild(createHomeContent());
+content.appendChild(createFooter());
+
+// event listeners
+const homeTab = document.getElementById('home-tab');
+homeTab.addEventListener('click', () => {
+  console.log(document.querySelector('.active-content'));
+  content.replaceChild(createHomeContent(), document.querySelector('.active-content'));
+});
+
+const menuTab = document.getElementById('menu-tab');
+menuTab.addEventListener('click', () => {
+  console.log(document.querySelector('.active-content'));
+  content.replaceChild(createMenu(), document.querySelector('.active-content'));
+});
+
+const contactTab = document.getElementById('contact-tab');
+contactTab.addEventListener('click', () => {
+  console.log(document.querySelector('.active-content'));
+  content.replaceChild(createContactContent(), document.querySelector('.active-content'));
+});
