@@ -3,6 +3,8 @@ export default function createContactContent() {
   const contactNumber = document.createElement('p');
   const address = document.createElement('p');
   const locationImage = document.createElement('img');
+  container.id = 'contact-content-container';
+  container.classList.add('active-content');
   contactNumber.textContent = '123456789';
   address.textContent = '317 Abbey Ln, Leicester LE4 5QJ, United Kingdom';
   container.appendChild(contactNumber);
