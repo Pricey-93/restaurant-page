@@ -30,5 +30,6 @@ export default function createMenu() {
   container.appendChild(createMenuItem('lorem ipsum pizza', 'lorem ipsum pizza containing the finest lorum ipsums', legoPizzaBox));
   container.appendChild(createMenuItem('lorem ipsum pizza', 'lorem ipsum pizza containing the finest lorum ipsums', legoPizzaBox));
   container.appendChild(createMenuItem('lorem ipsum pizza', 'lorem ipsum pizza containing the finest lorum ipsums', legoPizzaBox));
+  container.appendChild(createMenuItem('lorem ipsum pizza', 'lorem ipsum pizza containing the finest lorum ipsums', legoPizzaBox));
   return container;
 }
